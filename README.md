@@ -1,6 +1,6 @@
 # AI Study Assistant
 
-[![CI](https://github.com/MahidurSakib/ai-study-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/MahidurSakib/ai-study-assistant/actions/workflows/ci.yml)
+
 
 ## Project Brief
 
@@ -15,7 +15,7 @@ concrete rather than invented for the assignment.
 
 ## Live deployment
 
-**[Live app →](https://flyrank-ai-assignment-03.vercel.app)**
+
 
 ## Features
 
