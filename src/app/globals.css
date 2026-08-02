@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafafa;
+  --foreground: #18181b;
+  --surface: #ffffff;
+  --border: #e4e4e7;
+  --muted: #71717a;
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  color-scheme: light;
+}
+
+/* Fallback for no-JS / before the theme script runs, based on OS preference. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0b;
+    --foreground: #f4f4f5;
+    --surface: #18181b;
+    --border: #27272a;
+    --muted: #a1a1aa;
+    --accent: #818cf8;
+    --accent-foreground: #1e1b4b;
+    color-scheme: dark;
+  }
+}
+
+/* Explicit override once a preference is set on the Settings page --
+   takes priority over the OS-level media query above regardless of order,
+   since class specificity plus later declaration wins here. */
+html.dark {
+  --background: #0a0a0b;
+  --foreground: #f4f4f5;
+  --surface: #18181b;
+  --border: #27272a;
+  --muted: #a1a1aa;
+  --accent: #818cf8;
+  --accent-foreground: #1e1b4b;
+  color-scheme: dark;
+}
+
+html:not(.dark) {
+  --background: #fafafa;
+  --foreground: #18181b;
+  --surface: #ffffff;
+  --border: #e4e4e7;
+  --muted: #71717a;
+  --accent: #4f46e5;
+  --accent-foreground: #ffffff;
+  color-scheme: light;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+/* A visible, consistent focus ring across the app -- default browser
+   outlines vary and are easy to accidentally suppress; this keeps focus
+   visibility intentional rather than incidental. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
